@@ -33,11 +33,9 @@ public class Agenda {
     @JoinColumn(name = "id_cliente", nullable = false)
     private Cliente cliente;
 
-    @Column(nullable = false)
-    private LocalTime horaMarcada;
-
-    @Column(nullable = false)
-    private LocalDate dataMarcada;
+    @ManyToOne
+    @JoinColumn(name = "id_horario", nullable = false)
+    private Horario horario;
 
 
     private Boolean concluido = false;

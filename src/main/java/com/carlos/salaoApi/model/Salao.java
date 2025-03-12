@@ -1,9 +1,11 @@
 package com.carlos.salaoApi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,6 +26,11 @@ public class Salao {
     private Endereco endereco;
 
     @OneToMany(mappedBy = "salao")
-    private List<Servico> servicos;
+    @JsonIgnore
+    private List<Servico> servicos = new ArrayList<>();
+
+    @OneToMany(mappedBy = "salao")
+    @JsonIgnore
+    private List<Horario> horarios = new ArrayList<>();
 }
 

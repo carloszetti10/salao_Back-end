@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.net.URI;
 
 @RestController
-@RequestMapping("servicos")
+@RequestMapping("servico")
 @RequiredArgsConstructor
 public class ServicoController {
     private final ServicoService service;
