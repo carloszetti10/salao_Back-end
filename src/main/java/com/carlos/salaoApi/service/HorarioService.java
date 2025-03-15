@@ -32,7 +32,6 @@ public class HorarioService {
             if (horarioBase.getDiasDaSemana().contains(diaSemana)) { // Comparação correta com o enum
                 Horario novoHorario = new Horario();
                 novoHorario.setHoraInicial(horarioBase.getHoraInicial());
-                novoHorario.setHoraTerminio(horarioBase.getHoraTerminio());
                 novoHorario.setData(data);
                 novoHorario.setQuantidadeDisponivel(horarioBase.getQuantidadeDisponivel());
                 novoHorario.setDisponivel(true);

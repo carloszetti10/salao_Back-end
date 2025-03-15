@@ -27,9 +27,8 @@ public class UsuarioController {
     private final UsuarioService usuarioService;
     private final ClienteService clienteService;
     private final ColaboradorService colaboradorService;
+    private final UsuarioMapper mapper = UsuarioMapper.INSTANCE;
 
-    @Autowired
-    UsuarioMapper mapper;
 
     @PostMapping("/cliente")
     public ResponseEntity<Object> salvarCliente(@RequestBody @Valid UsuarioDTO dto){

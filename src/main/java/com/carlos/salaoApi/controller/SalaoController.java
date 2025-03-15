@@ -20,9 +20,7 @@ import java.net.URI;
 public class SalaoController {
 
     private final SalaoService salaoService;
-
-    @Autowired
-    SalaoMapper mapper = SalaoMapper.INSTANCE;
+    private final SalaoMapper mapper = SalaoMapper.INSTANCE;
 
     @PostMapping
     public ResponseEntity<Object> salvarSalao(@RequestBody @Valid SalaoDTO dto){

@@ -22,7 +22,7 @@ public class HorarioController {
     @Autowired
     private HorarioService horarioService;
     @Autowired
-    HorarioMapper mapper;
+    HorarioMapper mapper = HorarioMapper.INSTANCE;
 
     @PostMapping
     public List<Horario> salvarHorario(@RequestBody @Valid HorarioDTO dto){

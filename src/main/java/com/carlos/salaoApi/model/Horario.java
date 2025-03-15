@@ -26,9 +26,6 @@ public class Horario {
     @Column(nullable = false)
     private LocalTime horaInicial;
 
-    @Column
-    private LocalTime horaTerminio;
-
     @Column(nullable = false)
     private LocalDate data;
 

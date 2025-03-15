@@ -1,9 +1,6 @@
 package com.carlos.salaoApi.controller.dto;
 
-import com.carlos.salaoApi.model.Agenda;
-import com.carlos.salaoApi.model.Cliente;
-import com.carlos.salaoApi.model.Salao;
-import com.carlos.salaoApi.model.Servico;
+import com.carlos.salaoApi.model.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -21,8 +18,7 @@ public record AgendaDTO(
         @NotEmpty(message = "A lista de serviços não pode estar vazia")
         List<Servico> servicos,
         @NotNull(message = "Campo obrigatório")
-        @JsonFormat(pattern = "HH:mm")
-        LocalTime horaMarcada,
+        Horario horario,
         @NotNull(message = "Campo obrigatório")
         @JsonFormat(pattern = "yyyy-MM-dd")
         LocalDate dataMarcada

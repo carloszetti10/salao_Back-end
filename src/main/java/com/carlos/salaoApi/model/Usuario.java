@@ -20,10 +20,10 @@ public class Usuario {
     @Column(nullable = false, length = 200)
     private String nome;
 
-    @Column(unique = true, nullable = false, length = 255)
+    @Column(unique = true, length = 255)
     private String email;
 
-    @Column(nullable = false, length = 255)
+    @Column(length = 255)
     private String senha;
 
     @Column(length = 15)

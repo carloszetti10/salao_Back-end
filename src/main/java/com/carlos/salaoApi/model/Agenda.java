@@ -37,8 +37,11 @@ public class Agenda {
     @JoinColumn(name = "id_horario", nullable = false)
     private Horario horario;
 
-
+    @Column
     private Boolean concluido = false;
+
+    @Column
+    private LocalTime horaTerminio;
 
 
     @ManyToMany

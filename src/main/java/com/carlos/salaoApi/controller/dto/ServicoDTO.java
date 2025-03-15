@@ -10,10 +10,10 @@ import java.time.LocalTime;
 public record ServicoDTO(
         @NotBlank(message = "Campo obrigatorio")
         String nome,
-        String imgUrl,
+        String imagemUrl,
         @Positive
         double valor,
         @NotNull(message = "Campo obrigatorio")
-        LocalTime horaDemandada,
+        LocalTime horaDemorada,
         int porcentagemColab) {
 }

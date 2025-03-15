@@ -22,7 +22,9 @@ public class AgendaController {
 
     @PostMapping
     public ResponseEntity<?> salvarAgenda(@RequestBody @Valid AgendaDTO agendaDTO){
+        System.out.println(agendaDTO.toString());
             Agenda agenda = mapper.toEntity(agendaDTO);
+        System.out.println(agenda.toString());
             Agenda agendaSalva = service.salvar(agenda);
             return ResponseEntity.ok(agendaSalva);
 

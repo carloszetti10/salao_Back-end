@@ -22,13 +22,13 @@ import java.net.URI;
 @RequiredArgsConstructor
 public class ServicoController {
     private final ServicoService service;
-
-    @Autowired
-    ServicoMapper mapper;
+    private final ServicoMapper mapper = ServicoMapper.INSTANCE;
 
     @PostMapping
     public ResponseEntity<Object> salvarServico(@RequestBody @Valid ServicoDTO dto){
+            System.out.println(dto.toString());
             Servico servico = mapper.toEntity(dto);
+            System.out.println(servico.toString());
             Servico servicoSalvo = service.salva(servico);
             URI location = URI.create("/servicos/" + servicoSalvo.getIdServico());
             return ResponseEntity.created(location).body(servicoSalvo);
