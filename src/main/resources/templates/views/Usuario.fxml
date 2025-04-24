@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projeto.domRio1.doRio.controller.UsuarioController">
+   <children>
+      <HBox>
+         <children>
+            <HBox prefHeight="68.0" prefWidth="1140.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="title" text="Usuario">
+                     <graphic>
+                        <SVGPath content="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                     </graphic></Label>
+               </children>
+               <styleClass>
+                  <String fx:value="content-view-header" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets bottom="3.0" left="20.0" right="20.0" top="2.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="691.0" prefWidth="1180.0">
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+         <children>
+            <AnchorPane prefHeight="411.0" prefWidth="1140.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="42.0" layoutY="14.0" styleClass="dialog-title" text="Equipamentos ">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="42.0" layoutY="176.0" prefHeight="306.0" prefWidth="133.0">
+                     <children>
+                        <Label text="Patrimonio:">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Nome:">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Modelo:">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>
